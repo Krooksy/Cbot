@@ -53,5 +53,3 @@ client.on('message', message => {
 
 // Must stay at the end
 client.login(config.token);
-
-//test comment
