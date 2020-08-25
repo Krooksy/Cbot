@@ -1,0 +1,16 @@
+{
+  "name": "cbot",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "crks",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.3.1"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "description": ""
+}
