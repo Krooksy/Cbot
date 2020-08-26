@@ -26,8 +26,15 @@ client.on('message', message => {
     const commandName = args.shift().toLowerCase();
     const command = client.commands.get(commandName);
 
-    if (commandName === commandName) {
+    const commandList = []; 
+    for (const file of commandFiles) {
+        commandList.push(file.slice(0, -3));
+    }
+
+    if (commandList.includes(commandName)) {
         command.execute(message, args);
+    } else {
+        message.channel.send('Bruh, that\'s not a command, type "-help" for the command list');
     }
 });
 
