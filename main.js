@@ -23,31 +23,11 @@ client.on('message', message => {
     if(!message.content.startsWith(prefix) || message.author.bot) return;
 
     const args = message.content.slice(prefix.length).split(/ +/);
-    const command = args.shift().toLowerCase();
+    const commandName = args.shift().toLowerCase();
+    const command = client.commands.get(commandName);
 
-    if (command === 'ping') {
-        client.commands.get('ping').execute(message, args);
-    }
-    if (command === 'crks') {
-        client.commands.get('crks').execute(message, args);
-    }
-    if(command === 'time') {
-        client.commands.get('time').execute(message, args);
-    }
-    if(command === 'server') {
-        client.commands.get('server').execute(message, args);
-    }
-    if(command === 'purge') {
-        client.commands.get('purge').execute(message, args);
-    }
-    if(command === 'kick') {
-        client.commands.get('kick').execute(message, args);
-    }
-    if(command === 'ban') {
-        client.commands.get('ban').execute(message, args);
-    }
-    if(command === 'prune') {
-        client.commands.get('prune').execute(message, args);
+    if (commandName === commandName) {
+        command.execute(message, args);
     }
 });
 
